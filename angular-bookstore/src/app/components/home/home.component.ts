@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  title:string;
+  author:string;
+  info:string;
+
+  constructor() {
+
+   }
 
   ngOnInit() {
+    this.title = 'Fellowship of the Ring';
+    this.author = 'J.R.R Tolkien';
+    this.info = 'first of trilogy';
   }
+
+  
 
 }

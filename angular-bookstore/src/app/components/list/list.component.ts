@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  title:string;
 
   constructor() { }
 
   ngOnInit() {
+    this.title = 'Fellowship of the Ring';
   }
 
 }
