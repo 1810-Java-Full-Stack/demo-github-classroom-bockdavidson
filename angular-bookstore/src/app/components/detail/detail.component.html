@@ -1,14 +1,16 @@
 
+<h1>{{title}}</h1>
+
 <ul>
-  <li>Author: {{author}}</li>
-  <li>Info: {{info}}</li>
+  <li>Author: {{this.author}}</li>
+  <li>Info: {{this.info}}</li>
 </ul>
 
-<button (click) ="onClick()">Click Me</button>
+<button (click) ="onClick()">Save</button>
 <button (click) ="toggleEdit()">Edit Book</button>
 
 <div *ngIf=isEdit>
-<h1>Edit Book</h1>
+<h3>Edit Book</h3>
 <form>
   <div>
       <label for="author">Author: </label><br>

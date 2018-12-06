@@ -1,9 +1,9 @@
-
-<li *ngFor = "let t of title; let i = index">
-    <h1><a href='{{t}}'>{{t}}</a></h1>
-
-</li>
-
-<h1><a href='{{title}}'>{{title}}</a></h1>
+<h2>BOOKS</h2>
 
 
+<u>
+    <li *ngFor="let book of books">
+        <h3><a href='detail/{{book.id}}'>{{book.title}}</a></h3>
+      <!--{{book.title}}-->
+    </li>
+  </u>

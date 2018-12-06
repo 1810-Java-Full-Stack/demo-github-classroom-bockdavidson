@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/services/books.service';
+import { HomeComponent } from 'src/app/components/home/home.component';
+import { Book } from '../../models/Book';
 
 @Component({
   selector: 'app-list',
@@ -7,13 +9,36 @@ import { BooksService } from 'src/app/services/books.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  title:string;
+  //title:string;
+  //id: string;
+  books: Book[];
   
 
   constructor() { }
 
   ngOnInit() {
-    this.title = 'Fellowship of the Ring';
+    //this.id = '1';
+    //this.title = 'Fellowship of the Ring';
+    this.books = [
+      {
+        id: '1',
+        title: 'The Fellowship of the Ring',
+        author: 'J.R.R Tolkien',
+        info: 'The first of the trilogy'
+      },
+      {
+        id: '2',
+       title: 'The Two Towers',
+       author: 'J.R.R Tolkien',
+       info: 'The second of the trilogy'
+     },
+     {
+       id: '3',
+       title: 'The Return of the King',
+       author: 'J.R.R Tolkien',
+       info: 'The third of the trilogy'
+     },
+    ]
   }
 
 }
