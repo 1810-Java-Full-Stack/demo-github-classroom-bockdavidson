@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+<h2>Books</h2>
+<div>
+  <label>Book title:
+    <input #bookTitle />
+  </label>
+  <button (click)="add(bookTitle.value); bookTitle.value=''">
+    add
+  </button>
+</div>
+
+<ul class="books">
+  <li *ngFor="let book of books">
+    <a routerLink="/detail/{{book.id}}">
+      <span class="badge">{{book.id}}</span>  {{book.title}}
+    </a>
+    <button class="delete" title="delete book"
+      (click)="delete(book)">x</button>
+  </li>
+</ul>
+
+
+
+
+
+
+
